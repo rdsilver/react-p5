@@ -1,0 +1,27 @@
+{
+    "name": "react-p5",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/ReactP5.js",
+    "scripts": {
+        "start": "react-scripts start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "p5": "^0.7.3",
+        "prop-types": "^15.7.2"
+    },
+    "devDependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "^2.1.8"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}
