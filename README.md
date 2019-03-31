@@ -41,5 +41,8 @@ export default class App extends Component {
 
 ### Props
 
-Prop|Required|Type
-draw|true|Function
+| Prop  | Required | Type     |
+| ----- | -------- | -------- |
+| setup | true     | Function |
+| ----  | -------- | -------- |
+| draw  | true     | Function |
