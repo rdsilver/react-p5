@@ -29,20 +29,10 @@ export default class App extends Component {
         p5.background(0);
         p5.ellipse(this.state.x, this.state.y, 70, 70);
     };
-    windowResized = p => {
-        p.resizeCanvas(200, 200);
-    };
-    incrementX = e => {
-        this.setState(s => ({ x: s.x + 10 }));
-    };
     render() {
         return (
             <div>
-                <h1>My App</h1>
                 <ReactP5 setup={this.setup} draw={this.draw} windowResized={this.windowResized} />
-                <span>X: {this.state.x}</span>
-                <span>Y: {this.state.y}</span>
-                <button onClick={this.incrementX}>X+10</button>
             </div>
         );
     }
