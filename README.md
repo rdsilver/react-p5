@@ -32,9 +32,14 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <ReactP5 setup={this.setup} draw={this.draw} windowResized={this.windowResized} />
+                <ReactP5 setup={this.setup} draw={this.draw} />
             </div>
         );
     }
 }
 ```
+
+### Props
+
+Prop|Required|Type
+draw|true|Function
