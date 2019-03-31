@@ -45,3 +45,5 @@ export default class App extends Component {
 | ----- | -------- | -------- |
 | setup | true     | Function |
 | draw  | true     | Function |
+
+#### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/react-p5)

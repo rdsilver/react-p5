@@ -6,8 +6,12 @@
     "scripts": {
         "start": "react-scripts start"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "react",
+        "p5",
+        "p5js"
+    ],
+    "author": "Gherciu Gheorghe",
     "license": "ISC",
     "dependencies": {
         "p5": "^0.7.3",
