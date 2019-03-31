@@ -41,9 +41,14 @@ export default class App extends Component {
 
 ### Props
 
-| Prop  | Required | Type     |
-| ----- | -------- | -------- |
-| setup | true     | Function |
-| draw  | true     | Function |
+| Prop          | Required | Type     |
+| ------------- | -------- | -------- |
+| setup         | true     | Function |
+| draw          | true     | Function |
+| windowResized | false    | Function |
+| preload       | false    | Function |
+| mouseClicked  | false    | Function |
+| mouseMoved    | false    | Function |
+| doubleClicked | false    | Function |
 
 #### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/react-p5)
