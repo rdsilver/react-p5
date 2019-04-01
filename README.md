@@ -12,7 +12,7 @@ npm i react-p5
 
 ```js
 import React, { Component } from "react";
-import ReactP5 from "react-p5";
+import { Sketch } from "react-p5";
 
 export default class App extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <ReactP5 setup={this.setup} draw={this.draw} />
+                <Sketch setup={this.setup} draw={this.draw} />
             </div>
         );
     }
@@ -41,14 +41,29 @@ export default class App extends Component {
 
 ### Props
 
-| Prop          | Required | Type     |
-| ------------- | -------- | -------- |
-| setup         | true     | Function |
-| draw          | true     | Function |
-| windowResized | false    | Function |
-| preload       | false    | Function |
-| mouseClicked  | false    | Function |
-| mouseMoved    | false    | Function |
-| doubleClicked | false    | Function |
+| Prop          | Required | Type     | Description                 |
+| ------------- | -------- | -------- | --------------------------- |
+| className     | false    | String   | ClassName for canvas parent |
+| style         | false    | Object   | Styles for canvas parent    |
+| setup         | true     | Function |                             |
+| draw          | true     | Function |                             |
+| windowResized | false    | Function |                             |
+| preload       | false    | Function |                             |
+| mouseClicked  | false    | Function |                             |
+| mouseMoved    | false    | Function |                             |
+| doubleClicked | false    | Function |                             |
+| mousePressed  | false    | Function |                             |
+| mouseWheel    | false    | Function |                             |
+| mouseDragged  | false    | Function |                             |
+| mouseReleased | false    | Function |                             |
+| keyPressed    | false    | Function |                             |
+| keyReleased   | false    | Function |                             |
+| keyTyped      | false    | Function |                             |
+| touchStarted  | false    | Function |                             |
+| touchMoved    | false    | Function |                             |
+| touchEnded    | false    | Function |                             |
+| deviceMoved   | false    | Function |                             |
+| deviceTurned  | false    | Function |                             |
+| deviceShaken  | false    | Function |                             |
 
 #### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/react-p5)

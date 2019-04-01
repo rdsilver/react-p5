@@ -1,6 +1,6 @@
 {
     "name": "react-p5",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "main": "./src/ReactP5.js",
     "scripts": {

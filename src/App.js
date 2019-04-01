@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactP5 from "./ReactP5";
+import { Sketch } from "./Sketch";
 
 export default class App extends Component {
     constructor(props) {
@@ -36,8 +36,8 @@ export default class App extends Component {
             <div>
                 <center>
                     <h1>My App</h1>
-                    <ReactP5 setup={this.setup} draw={this.draw} windowResized={this.windowResized} />
-                    <ReactP5 setup={this.setup} draw={this.draw} windowResized={this.windowResized} />
+                    <Sketch setup={this.setup} draw={this.draw} windowResized={this.windowResized} className="myCanvas" />
+                    <Sketch setup={this.setup} draw={this.draw} windowResized={this.windowResized} style={{ padding: 20, background: "red" }} />
                     <span>X: {this.state.x}</span>
                     <span>Y: {this.state.y}</span>
                     <div>
