@@ -1,6 +1,6 @@
 # react-p5
 
-This Component lets you integrate p5 Sketches into your React App.
+This Component lets you integrate p5 Sketches into your React App. [DEMO](https://codesandbox.io/s/k09k8knxz5)
 
 ### Installation
 
