@@ -15,7 +15,7 @@ import React, { Component } from "react";
 import { Sketch } from "react-p5";
 
 export default class App extends Component {
-    x = 50,
+    x = 50
     y = 50
     
     setup = (p5, parent) => {
