@@ -12,19 +12,20 @@ npm i react-p5
 
 ```js
 import React, { Component } from "react";
-import { Sketch } from "react-p5";
+import Sketch from "react-p5";
 
 export default class App extends Component {
     x = 50
     y = 50
     
     setup = (p5, parent) => {
-        p5.createCanvas(500, 500).parent(parent);
-    };
+        p5.createCanvas(500, 500).parent(parent)
+    }
     draw = p5 => {
-        p5.background(0);
-        p5.ellipse(this.state.x, this.state.y, 70, 70);
-    };
+        p5.background(0)
+        p5.ellipse(this.x, this.y, 70, 70)
+        this.x += 0.2
+    }
     
     render() {
         return <Sketch setup={this.setup} draw={this.draw} />
@@ -39,7 +40,7 @@ export default class App extends Component {
 | className     | false    | String   | ClassName for canvas parent |
 | style         | false    | Object   | Styles for canvas parent    |
 | setup         | true     | Function |                             |
-| draw          | true     | Function |                             |
+| draw          | false    | Function |                             |
 | windowResized | false    | Function |                             |
 | preload       | false    | Function |                             |
 | mouseClicked  | false    | Function |                             |
