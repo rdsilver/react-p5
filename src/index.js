@@ -37,7 +37,7 @@ export default class Sketch extends React.Component {
                 "windowResized",
                 "preload",
                 "mouseClicked",
-                "oubleClicked",
+                "doubleClicked",
                 "mouseMoved",
                 "mousePressed",
                 "mouseWheel",
