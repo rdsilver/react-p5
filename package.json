@@ -12,7 +12,11 @@
     "url": "Gherciu/react-p5",
     "type": "git"
   },
-  "author": "Gherciu Gheorghe",
+  "author": {
+		"name": "Gherciu Gheorghe",
+		"email": "gherciu553@gmail.com",
+		"url": "https://gherciu.github.io/portfolio/"
+	},
   "license": "MIT",
   "dependencies": {
     "p5": "^0.7.3",
