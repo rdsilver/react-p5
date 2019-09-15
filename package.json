@@ -1,6 +1,6 @@
 {
   "name": "react-p5",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This Component lets you integrate p5 Sketches into your React App",
   "main": "./src/index.js",
   "keywords": [
@@ -13,10 +13,10 @@
     "type": "git"
   },
   "author": {
-		"name": "Gherciu Gheorghe",
-		"email": "gherciu553@gmail.com",
-		"url": "https://gherciu.github.io/portfolio/"
-	},
+    "name": "Gherciu Gheorghe",
+    "email": "gherciu553@gmail.com",
+    "url": "https://gherciu.github.io/portfolio/"
+  },
   "license": "MIT",
   "dependencies": {
     "p5": "^0.7.3",
