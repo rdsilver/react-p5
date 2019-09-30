@@ -1,6 +1,6 @@
 {
   "name": "react-p5",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This Component lets you integrate p5 Sketches into your React App",
   "main": "./src/index.js",
   "keywords": [
@@ -19,8 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "p5": "^0.7.3",
-    "prop-types": "^15.7.2"
+    "p5": "^0.7.3"
   },
   "peerDependencies": {
     "react": "16.x",

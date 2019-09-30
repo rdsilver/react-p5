@@ -1,32 +1,7 @@
 import p5 from "p5";
-import PropTypes from "prop-types";
 import React from "react";
 
 export default class Sketch extends React.Component {
-    static propTypes = {
-        className: PropTypes.string,
-        style: PropTypes.object,
-        setup: PropTypes.func.isRequired,
-        draw: PropTypes.func,
-        windowResized: PropTypes.func,
-        preload: PropTypes.func,
-        mouseClicked: PropTypes.func,
-        doubleClicked: PropTypes.func,
-        mouseMoved: PropTypes.func,
-        mousePressed: PropTypes.func,
-        mouseWheel: PropTypes.func,
-        mouseDragged: PropTypes.func,
-        mouseReleased: PropTypes.func,
-        keyPressed: PropTypes.func,
-        keyReleased: PropTypes.func,
-        keyTyped: PropTypes.func,
-        touchStarted: PropTypes.func,
-        touchMoved: PropTypes.func,
-        touchEnded: PropTypes.func,
-        deviceMoved: PropTypes.func,
-        deviceTurned: PropTypes.func,
-        deviceShaken: PropTypes.func
-    };
     componentDidMount() {
         this.scketch = new p5(p => {
             p.setup = () => {
