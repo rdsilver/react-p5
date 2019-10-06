@@ -1,5 +1,5 @@
-import p5 from "p5";
 import React from "react";
+import p5 from "p5";
 
 export default class Sketch extends React.Component {
     componentDidMount() {
