@@ -2,10 +2,15 @@ import React from "react";
 import p5 from "p5";
 
 export default class Sketch extends React.Component {
+    constructor(props) {
+        super(props)
+        this.canvasRef = React.createRef()
+    }
+
     componentDidMount() {
         this.scketch = new p5(p => {
             p.setup = () => {
-                this.props.setup(p, this.refs.canvas_container);
+                this.props.setup(p, this.canvasRef.current);
             };
             const p5Events = [
                 "draw",
@@ -44,6 +49,6 @@ export default class Sketch extends React.Component {
         this.scketch.remove();
     }
     render() {
-        return <div ref="canvas_container" className={this.props.className || ""} style={this.props.style || {}} />;
+        return <div ref={this.canvasRef} className={this.props.className || ""} style={this.props.style || {}} />;
     }
 }
