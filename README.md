@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="200" height="200"
+  <img width="300" height="200"
     src="https://raw.githubusercontent.com/Gherciu/react-p5/master/logo.png">
   <h1>react-p5</h1>
   <p>This Component lets you integrate p5 Sketches into your React App. <a href="https://codesandbox.io/s/k09k8knxz5">DEMO</a></p>
