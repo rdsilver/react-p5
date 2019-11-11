@@ -1,5 +1,9 @@
 import React from "react";
 import p5 from "p5";
+
+if(typeof window !== undefined)
+  window.p5 = p5
+
 import 'p5/lib/addons/p5.sound';
 import 'p5/lib/addons/p5.dom';
 
