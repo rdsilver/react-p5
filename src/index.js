@@ -1,5 +1,7 @@
 import React from "react";
 import p5 from "p5";
+import 'p5/lib/addons/p5.sound';
+import 'p5/lib/addons/p5.dom';
 
 export default class Sketch extends React.Component {
     constructor(props) {
