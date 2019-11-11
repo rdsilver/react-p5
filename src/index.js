@@ -1,10 +1,8 @@
 import React from "react";
 import p5 from "p5";
 
-if(typeof window !== undefined) {
+if(typeof window !== undefined)
   window.p5 = p5
-  this.p5 = p5
-}
 export default class Sketch extends React.Component {
     constructor(props) {
         super(props)
