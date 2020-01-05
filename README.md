@@ -23,8 +23,8 @@ export default class App extends Component {
   x = 50;
   y = 50;
 
-  setup = p5 => {
-    p5.createCanvas(500, 500);
+  setup = (p5, canvasParentRef) => {
+    p5.createCanvas(500, 500).parent(canvasParentRef); // use parent to render canvas in this ref (without that p5 render this canvas outside your component)
   };
   draw = p5 => {
     p5.background(0);

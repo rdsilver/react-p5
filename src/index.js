@@ -11,8 +11,10 @@ export default class Sketch extends React.Component {
 
     componentDidMount() {
         this.scketch = new p5(p => {
+            p.setup = () => {
+                this.props.setup(p, this.canvasParentRef.current);
+            };
             const p5Events = [
-                "setup",
                 "draw",
                 "windowResized",
                 "preload",
