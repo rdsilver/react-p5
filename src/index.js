@@ -11,12 +11,9 @@ export default class Sketch extends React.Component {
 
     componentDidMount() {
         this.scketch = new p5(p5Instance => {
-            const customisedP5Instance = {
-              ...p5Instance,
-              createCanvas: (...args) => {
-                p5Instance.createCanvas(...args).parent(this.canvasParentRef);
-              }
-            }
+            // p5Instance.createCanvas = (...args) => {
+            //   p5Instance.createCanvas(...args).parent(this.canvasParentRef);
+            // }
             const p5Events = [
                 "setup",
                 "draw",
@@ -41,7 +38,7 @@ export default class Sketch extends React.Component {
             ];
             p5Events.forEach(event => {
                 if (this.props[event]) {
-                    customisedP5Instance[event] = () => {
+                  p5Instance[event] = () => {
                         this.props[event](customisedP5Instance);
                     };
                 }

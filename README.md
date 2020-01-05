@@ -10,7 +10,7 @@
 ### Installation
 
 ```bash
-npm i react-p5 p5
+npm i react-p5
 ```
 
 ### Usage

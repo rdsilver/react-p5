@@ -27,7 +27,6 @@ module.exports = {
     alias: {
       'react': path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-      'p5': path.resolve(__dirname, './node_modules/p5/lib/p5'),
     }
   },
   externals: {
@@ -44,11 +43,5 @@ module.exports = {
       amd: "ReactDOM",
       root: "ReactDOM"
     },
-    "p5": {
-      commonjs: "p5",
-      commonjs2: "p5",
-      amd: "p5",
-      root: "p5"
-    }
   }
 }
