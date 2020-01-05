@@ -10,7 +10,7 @@ export default class Sketch extends React.Component {
     }
 
     componentDidMount() {
-        this.scketch = new p5(p5Instance => {
+        this.scketch = new p5(p => {
             const p5Events = [
                 "setup",
                 "draw",
@@ -35,8 +35,8 @@ export default class Sketch extends React.Component {
             ];
             p5Events.forEach(event => {
                 if (this.props[event]) {
-                  p5Instance[event] = () => {
-                        this.props[event](p5Instance);
+                    p[event] = () => {
+                        this.props[event](p);
                     };
                 }
             });
