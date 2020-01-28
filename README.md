@@ -74,9 +74,9 @@ export default class App extends Component {
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-#### Or you can sponsor via [Open Collective](https://opencollective.com/gherciu-gheorghe/)
+#### Or you can sponsor via [Open Collective](https://opencollective.com/react-p5/)
 
-[![Open Collective](https://opencollective.com/gherciu-gheorghe/tiers/sponsor.svg?avatarHeight=60)](https://opencollective.com/gherciu-gheorghe/)
+[![Open Collective](https://opencollective.com/react-p5/tiers/sponsor.svg?avatarHeight=60)](https://opencollective.com/react-p5/)
 
 ## Author
 
