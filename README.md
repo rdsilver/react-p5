@@ -29,7 +29,7 @@ export default class App extends Component {
   draw = p5 => {
     p5.background(0);
     p5.ellipse(this.x, this.y, 70, 70);
-    // NOTE: Do not use setState in draw function or in functions that is executed in draw function... pls use normal variables or class properties for this purposes
+    // NOTE: Do not use setState in the draw function or in functions that are executed in the draw function... please use normal variables or class properties for these purposes
     this.x++;
   };
 
