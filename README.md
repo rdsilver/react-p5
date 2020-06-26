@@ -12,7 +12,7 @@
 -   npm
 
     ```bash
-    npm i react-p5
+    npm i --save react-p5
     ```
 
 -   yarn
