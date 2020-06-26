@@ -1,7 +1,5 @@
 // P5 interface contains all p5 utils, you can check all available methods and props at this url https://p5js.org/reference/
-interface P5 {
-  [key: string]: any
-}
+type P5 = import("p5");
 
 export interface SketchProps {
 	/**	ClassName for canvas parent ref  */
