@@ -29,10 +29,9 @@
 import React from "react";
 import Sketch from "react-p5";
 
-export default (props) => {
 	let x = 50;
-	const y = 50;
-
+	let y = 50;
+export default (props) => {
 	const setup = (p5, canvasParentRef) => {
 		// use parent to render the canvas in this ref
 		// (without that p5 will render the canvas outside of your component)
