@@ -122,7 +122,7 @@ const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
 
 ## Author
 
-**[@Gherciu/react-p5](https://github.com/Gherciu/react-p5)** :copyright: [GHERCIU](https://github.com/Gherciu), Released under the [MIT](https://github.com/Gherciu/react-p5/blob/master/LICENSE) License.<br>
-Authored and maintained by GHERCIU with help from contributors ([list](https://github.com/Gherciu/react-p5/contributors)).
+**[@Gherciu/react-p5](https://github.com/Gherciu/react-p5)** Released under the [MIT](https://github.com/Gherciu/react-p5/blob/master/LICENSE) License.<br>
+Authored and maintained by [GHERCIU GHEORGHE](https://github.com/Gherciu) with help from contributors ([list](https://github.com/Gherciu/react-p5/contributors)).
 
 #### If you like this repository star:star: and watch:eyes: on [GitHub](https://github.com/Gherciu/react-p5)
