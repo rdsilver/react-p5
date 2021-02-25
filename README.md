@@ -23,6 +23,7 @@
     ```
 
 ## Usage
+For Tips and Advanced Usage you can read this [Blog Post](https://gherciu-gheorghe.medium.com/integrating-p5-sketches-into-your-react-app-9c710f9d2743)
 
 #### JavaScript
 
