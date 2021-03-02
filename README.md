@@ -8,6 +8,8 @@
 [![GitHub](https://img.shields.io/github/license/Gherciu/react-p5)](https://github.com/Gherciu/react-p5/blob/master/LICENSE)
 [![ggpack](https://img.shields.io/badge/Generated%20from-gherciu%2Fggpack-green)](https://github.com/gherciu/ggpack)
 
+For Tips and [Advanced Usage](https://gherciu-gheorghe.medium.com/integrating-p5-sketches-into-your-react-app-9c710f9d2743) you can read this [Blog Post](https://gherciu-gheorghe.medium.com/integrating-p5-sketches-into-your-react-app-9c710f9d2743)
+
 ## Installation
 
 -   npm
