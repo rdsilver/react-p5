@@ -36,8 +36,8 @@ export default class Sketch extends React.Component {
       ];
       p5Events.forEach((event) => {
         if (this.props[event]) {
-          p[event] = () => {
-            this.props[event](p);
+          p[event] = (...rest) => {
+            this.props[event](p, ...rest);
           };
         }
       });
