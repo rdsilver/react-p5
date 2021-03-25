@@ -85,6 +85,14 @@ const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
 };
 ```
 
+#### Tips
+- If you need to get the `browser event object` inside your p5 methods like `mouseClicked` or others you can do it by accessing the second arg.
+```js
+mouseClicked(_p5, event) {
+  console.log(event)
+}
+```
+
 ## Props
 
 | Prop                                                           | Required           | Type     | Description                                                                                                                                                                                                           |
