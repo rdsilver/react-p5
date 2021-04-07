@@ -93,6 +93,20 @@ mouseClicked(_p5, event) {
 }
 ```
 
+- Events that are accessed using props are always attached to `window`. 
+That means that events are triggered throughout the whole page ([see the p5 docs for reference](https://p5js.org/reference/#/p5.Element/mousePressed)).  
+
+If you would like to attach events only to canvas see the example below.
+As an example limiting click events to the canvas:
+```javascript
+const setup = (p5, canvasParentRef) => {
+      cnv = p5.createCanvas(width, height).parent(canvasParentRef)
+      cnv.mousePressed((event) => {
+        console.log("Clicked on the canvas. Event:", event)
+      })
+    }
+```
+
 ## Props
 
 | Prop                                                           | Required           | Type     | Description                                                                                                                                                                                                           |
