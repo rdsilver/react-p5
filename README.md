@@ -85,6 +85,45 @@ const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
 };
 ```
 
+#### Next.js SSR
+
+Importing this package in a Next.js package may give you this error:
+
+```
+ReferenceError: window is not defined
+```
+
+This is because importing `react-p5` requires `window` to be available, and it isn't when server side rendering. We can fix this using [Next.js dynamic imports with No SSR](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr).
+
+```
+import React from "react";
+import dynamic from 'next/dynamic'
+
+// Will only import `react-p5` on client-side
+const SketchNoSSR = dynamic(() => import('react-p5').then((mod) => mod.default), {
+  ssr: false,
+})
+
+let x = 50;
+let y = 50;
+
+export default (props) => {
+	const setup = (p5, canvasParentRef) => {
+		p5.createCanvas(500, 500).parent(canvasParentRef);
+	};
+
+	const draw = (p5) => {
+		p5.background(0);
+		p5.ellipse(x, y, 70, 70);
+		x++;
+	};
+
+// Will only render on client-side
+	return <SketchNoSSR setup={setup} draw={draw} />;
+};
+```
+
+
 #### Tips
 - If you need to get the `browser event object` inside your p5 methods like `mouseClicked` or others you can do it by accessing the second arg.
 ```js
