@@ -107,7 +107,8 @@ const setup = (p5, canvasParentRef) => {
     }
 ```
 
-- Using it in an SSR environement
+- Using it in an SSR environement.
+
 Importing this package for example in a Next.js app may give you this error:
 
 ```
