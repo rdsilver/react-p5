@@ -5,6 +5,10 @@
   <p>This Component lets you integrate p5 Sketches into your React App. <a href="https://codesandbox.io/s/k09k8knxz5">DEMO</a></p>
 </div>
 
+> The author of this package is looking for a job opportunity to make some 💴 for a living. 
+> If you have any offers reach me out on [LinkedIn](https://www.linkedin.com/in/gherciu/) or [Mail](mailto:gherciu553@gmail.com). 
+> Thanks in advance!
+
 [![GitHub](https://img.shields.io/github/license/Gherciu/react-p5)](https://github.com/Gherciu/react-p5/blob/master/LICENSE)
 [![ggpack](https://img.shields.io/badge/Generated%20from-gherciu%2Fggpack-green)](https://github.com/gherciu/ggpack)
 
