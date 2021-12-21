@@ -89,7 +89,7 @@ const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
 };
 ```
 
-#### Tips
+### Tips
 - If you need to get the `browser event object` inside your p5 methods like `mouseClicked` or others you can do it by accessing the second arg.
 ```js
 mouseClicked(_p5, event) {
@@ -97,7 +97,7 @@ mouseClicked(_p5, event) {
 }
 ```
 
-- Events that are accessed using props are always attached to `window`. 
+#### Events that are accessed using props are always attached to `window`. 
 That means that events are triggered throughout the whole page ([see the p5 docs for reference](https://p5js.org/reference/#/p5.Element/mousePressed)).  
 
 If you would like to attach events only to canvas see the example below.
@@ -111,7 +111,7 @@ const setup = (p5, canvasParentRef) => {
     }
 ```
 
-- Using it in an SSR environement.
+#### Using it in an SSR environement.
 
 Importing this package for example in a Next.js app may give you this error:
 
@@ -148,6 +148,9 @@ export default (props) => {
 	return <Sketch setup={setup} draw={draw} />;
 };
 ```
+
+#### With p5.sound
+I frequently see this question even if the implimentation is super simple)) The only needed thing is to import "p5.sound" lib. I created a [Special CodeSandbox DEMO](https://codesandbox.io/s/react-p5-forked-9ixi4?file=/src/index.js) if someone needs to see the implimentation.
 
 
 ## Props
