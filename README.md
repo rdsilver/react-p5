@@ -152,6 +152,22 @@ export default (props) => {
 #### With p5.sound
 I frequently see this question even if the implimentation is super simple)) The only needed thing is to import "p5.sound" lib. I created a [Special CodeSandbox DEMO](https://codesandbox.io/s/react-p5-forked-9ixi4?file=/src/index.js) if someone needs to see the implimentation.
 
+#### With p5.sound + next.js (or other framework which has support for SSR)
+This question also is frequently asked and the only difference from the normal aprouch is that in SSR mode the react-p5 lib should not be loaded because p5 doesn't support SSR and there is no sense for it to be support. So, if you are using react-p5 plus next.js and you need also p5.sound then try to use dynamic imports as in the code bellow which definitelly will help you.
+
+```js
+import dynamic from 'next/dynamic'
+
+// Will only import `react-p5` on client-side
+const Sketch = dynamic(() => import("react-p5").then((mod) => {
+  // importing sound lib ONLY AFTER REACT-P5 is loaded
+  require('p5/lib/addons/p5.sound');
+  // returning react-p5 default export
+  return mod.default
+}), {
+  ssr: false
+});
+```
 
 ## Props
 
