@@ -70,9 +70,11 @@ interface ComponentProps {
 	//Your component props
 }
 
-const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
-	let x = 50;
+let x = 50;
 	const y = 50;
+  
+const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
+	
 
 	//See annotations in JS for more information
 	const setup = (p5: p5Types, canvasParentRef: Element) => {
