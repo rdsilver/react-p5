@@ -10,10 +10,6 @@
 
 For Tips and [Advanced Usage](https://levelup.gitconnected.com/integrating-p5-sketches-into-your-react-app-de44a8c74e91) you can read this [Blog Post](https://levelup.gitconnected.com/integrating-p5-sketches-into-your-react-app-de44a8c74e91)
 
-> **The author of this package is looking for a job opportunity to make some 💴 for a living.**
-> **If you have any offers reach me out on [LinkedIn](https://www.linkedin.com/in/gherciu/) or [Mail](mailto:gherciu553@gmail.com).**
-> **Thanks in advance!**
-
 ## Installation
 
 -   npm
