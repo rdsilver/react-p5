@@ -109,15 +109,17 @@ const setup = (p5, canvasParentRef) => {
     }
 ```
 
-#### Using it in an SSR environement.
+#### Using it in an SSR environment (Next.js or Gatsby)
 
-Importing this package for example in a Next.js app may give you this error:
+Importing this package for example in a Next.js or Gatsby app may give you this error:
 
 ```
 ReferenceError: window is not defined
 ```
 
-This is because importing `p5` requires `window` to be available, and it isn't when server side rendering. We can fix this using [Next.js dynamic imports with No SSR](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr).
+This is because importing `p5` requires `window` to be available, and it isn't when server side rendering.
+
+For Next.js we can fix this using [Next.js dynamic imports with No SSR](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr).
 
 ```
 import React from "react";
@@ -145,6 +147,15 @@ export default (props) => {
 // Will only render on client-side
 	return <Sketch setup={setup} draw={draw} />;
 };
+```
+
+For Gatsby we can use loadable-components. See [Gatsby docs: Load client-side dependent components with loadable-components](https://github.com/Gherciu/react-p5.git).
+```
+const LoadablePage = Loadable(
+  () => import("path-to-page-with-p5-sketch")
+);
+
+export default LoadablePage;
 ```
 
 #### With p5.sound
