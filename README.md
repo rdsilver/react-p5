@@ -122,37 +122,20 @@ This is because importing `p5` requires `window` to be available, and it isn't w
 For Next.js we can fix this using [Next.js dynamic imports with No SSR](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr).
 
 ```
-import React from "react";
 import dynamic from 'next/dynamic'
 
 // Will only import `react-p5` on client-side
 const Sketch = dynamic(() => import('react-p5').then((mod) => mod.default), {
   ssr: false,
 })
-
-let x = 50;
-let y = 50;
-
-export default (props) => {
-	const setup = (p5, canvasParentRef) => {
-		p5.createCanvas(500, 500).parent(canvasParentRef);
-	};
-
-	const draw = (p5) => {
-		p5.background(0);
-		p5.ellipse(x, y, 70, 70);
-		x++;
-	};
-
-// Will only render on client-side
-	return <Sketch setup={setup} draw={draw} />;
-};
 ```
 
-For Gatsby we can use loadable-components. See [Gatsby docs: Load client-side dependent components with loadable-components](https://github.com/Gherciu/react-p5.git).
+For Gatsby we can use loadable-components. See [Gatsby docs: Load client-side dependent components with loadable-components](https://www.gatsbyjs.com/docs/using-client-side-only-packages/#workaround-4-load-client-side-dependent-components-with-loadable-components).
 ```
-const LoadablePage = Loadable(
-  () => import("path-to-page-with-p5-sketch")
+import Loadable from "@loadable/component"
+
+const Sketch = Loadable(
+  () => import("react-p5")
 );
 
 export default LoadablePage;
