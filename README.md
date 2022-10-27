@@ -198,7 +198,8 @@ const Sketch = dynamic(() => import("react-p5").then((mod) => {
 
 #### Or you can sponsor via [Open Collective](https://opencollective.com/react-p5/)
 
-[![Open Collective](https://opencollective.com/react-p5/tiers/sponsor.svg?avatarHeight=60)](https://opencollective.com/react-p5/)
+<img src="https://opencollective.com/react-p5/sponsors.svg" />
+<img src="https://opencollective.com/react-p5/backers.svg" />
 
 ## Author
 
