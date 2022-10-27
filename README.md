@@ -8,6 +8,9 @@
 [![GitHub](https://img.shields.io/github/license/Gherciu/react-p5)](https://github.com/Gherciu/react-p5/blob/master/LICENSE)
 [![ggpack](https://img.shields.io/badge/Generated%20from-gherciu%2Fggpack-green)](https://github.com/gherciu/ggpack)
 
+[![sponsors](https://opencollective.com/react-p5/sponsors.svg)](https://opencollective.com/react-p5)
+[![backers](https://opencollective.com/react-p5/backers.svg)](https://opencollective.com/react-p5)
+
 For Tips and [Advanced Usage](https://levelup.gitconnected.com/integrating-p5-sketches-into-your-react-app-de44a8c74e91) you can read this [Blog Post](https://levelup.gitconnected.com/integrating-p5-sketches-into-your-react-app-de44a8c74e91)
 
 ## Installation
@@ -197,9 +200,6 @@ const Sketch = dynamic(() => import("react-p5").then((mod) => {
 5. Submit a pull request :D
 
 #### Or you can sponsor via [Open Collective](https://opencollective.com/react-p5/)
-
-<img src="https://opencollective.com/react-p5/sponsors.svg" />
-<img src="https://opencollective.com/react-p5/backers.svg" />
 
 ## Author
 
