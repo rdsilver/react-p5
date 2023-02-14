@@ -36,25 +36,25 @@ For Tips and [Advanced Usage](https://levelup.gitconnected.com/integrating-p5-sk
 import React from "react";
 import Sketch from "react-p5";
 
-	let x = 50;
-	let y = 50;
+let x = 50;
+let y = 50;
 export default (props) => {
-	const setup = (p5, canvasParentRef) => {
-		// use parent to render the canvas in this ref
-		// (without that p5 will render the canvas outside of your component)
-		p5.createCanvas(500, 500).parent(canvasParentRef);
-	};
+  const setup = (p5, canvasParentRef) => {
+    // use parent to render the canvas in this ref
+    // (without that p5 will render the canvas outside of your component)
+    p5.createCanvas(500, 500).parent(canvasParentRef);
+  };
 
-	const draw = (p5) => {
-		p5.background(0);
-		p5.ellipse(x, y, 70, 70);
-		// NOTE: Do not use setState in the draw function or in functions that are executed
-		// in the draw function...
-		// please use normal variables or class properties for these purposes
-		x++;
-	};
+  const draw = (p5) => {
+    p5.background(0);
+    p5.ellipse(x, y, 70, 70);
+    // NOTE: Do not use setState in the draw function or in functions that are executed
+    // in the draw function...
+    // please use normal variables or class properties for these purposes
+    x++;
+  };
 
-	return <Sketch setup={setup} draw={draw} />;
+  return <Sketch setup={setup} draw={draw} />;
 };
 ```
 
@@ -66,50 +66,53 @@ import Sketch from "react-p5";
 import p5Types from "p5"; //Import this for typechecking and intellisense
 
 interface ComponentProps {
-	//Your component props
+  // Your component props
 }
 
 let x = 50;
-	const y = 50;
+const y = 50;
   
 const YourComponent: React.FC<ComponentProps> = (props: ComponentProps) => {
-	
 
-	//See annotations in JS for more information
-	const setup = (p5: p5Types, canvasParentRef: Element) => {
-		p5.createCanvas(500, 500).parent(canvasParentRef);
-	};
+  // See annotations in JS for more information
+  const setup = (p5: p5Types, canvasParentRef: Element) => {
+    p5.createCanvas(500, 500).parent(canvasParentRef);
+  };
 
-	const draw = (p5: p5Types) => {
-		p5.background(0);
-		p5.ellipse(x, y, 70, 70);
-		x++;
-	};
+  const draw = (p5: p5Types) => {
+    p5.background(0);
+    p5.ellipse(x, y, 70, 70);
+    x++;
+  };
 
-	return <Sketch setup={setup} draw={draw} />;
+  return <Sketch setup={setup} draw={draw} />;
 };
 ```
 
 ### Tips
+
 - If you need to get the `browser event object` inside your p5 methods like `mouseClicked` or others you can do it by accessing the second arg.
-```js
+
+```javascript
 mouseClicked(_p5, event) {
   console.log(event)
 }
 ```
 
 #### Events that are accessed using props are always attached to `window`. 
+
 That means that events are triggered throughout the whole page ([see the p5 docs for reference](https://p5js.org/reference/#/p5.Element/mousePressed)).  
 
 If you would like to attach events only to canvas see the example below.
 As an example limiting click events to the canvas:
+
 ```javascript
 const setup = (p5, canvasParentRef) => {
-      cnv = p5.createCanvas(width, height).parent(canvasParentRef)
-      cnv.mousePressed((event) => {
-        console.log("Clicked on the canvas. Event:", event)
-      })
-    }
+  cnv = p5.createCanvas(width, height).parent(canvasParentRef)
+  cnv.mousePressed((event) => {
+    console.log("Clicked on the canvas. Event:", event)
+  })
+}
 ```
 
 #### Using it in an SSR environment (Next.js or Gatsby)
@@ -124,7 +127,7 @@ This is because importing `p5` requires `window` to be available, and it isn't w
 
 For Next.js we can fix this using [Next.js dynamic imports with No SSR](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr).
 
-```
+```javascript
 import dynamic from 'next/dynamic'
 
 // Will only import `react-p5` on client-side
@@ -134,7 +137,7 @@ const Sketch = dynamic(() => import('react-p5').then((mod) => mod.default), {
 ```
 
 For Gatsby we can use loadable-components. See [Gatsby docs: Load client-side dependent components with loadable-components](https://www.gatsbyjs.com/docs/using-client-side-only-packages/#workaround-4-load-client-side-dependent-components-with-loadable-components).
-```
+```javascript
 import Loadable from "@loadable/component"
 
 const Sketch = Loadable(
@@ -145,18 +148,22 @@ export default Sketch;
 ```
 
 #### With p5.sound
-I frequently see this question even if the implimentation is super simple)) The only needed thing is to import "p5.sound" lib. I created a [Special CodeSandbox DEMO](https://codesandbox.io/s/react-p5-forked-9ixi4?file=/src/index.js) if someone needs to see the implimentation.
+
+I frequently see this question even if the implimentation is super simple. The only needed thing is to import the p5.sound lib. I created a [special CodeSandbox demo](https://codesandbox.io/s/react-p5-forked-9ixi4?file=/src/index.js) if someone needs to see the implementation.
 
 #### With p5.sound + next.js (or other framework which has support for SSR)
-This question also is frequently asked and the only difference from the normal aprouch is that in SSR mode the react-p5 lib should not be loaded because p5 doesn't support SSR and there is no sense for it to be support. So, if you are using react-p5 plus next.js and you need also p5.sound then try to use dynamic imports as in the code bellow which definitelly will help you.
 
-```js
+This question also is frequently asked and the only difference from the normal aprouch is that in SSR mode the react-p5 lib should not be loaded because p5 doesn't support SSR and there is no sense for it to be support. So, if you are using react-p5 plus next.js and you need p5.sound as well, then try to use dynamic imports as in the code below which definitelly will help you.
+
+```javascript
 import dynamic from 'next/dynamic'
 
 // Will only import `react-p5` on client-side
 const Sketch = dynamic(() => import("react-p5").then((mod) => {
-  // importing sound lib ONLY AFTER REACT-P5 is loaded
+
+  // importing sound lib only after react-p5 is loaded
   require('p5/lib/addons/p5.sound');
+
   // returning react-p5 default export
   return mod.default
 }), {
