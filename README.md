@@ -153,7 +153,7 @@ I frequently see this question even if the implimentation is super simple. The o
 
 #### With p5.sound + next.js (or other framework which has support for SSR)
 
-This question also is frequently asked and the only difference from the normal aprouch is that in SSR mode the react-p5 lib should not be loaded because p5 doesn't support SSR and there is no sense for it to be support. So, if you are using react-p5 plus next.js and you need p5.sound as well, then try to use dynamic imports as in the code below which definitelly will help you.
+This question also is frequently asked and the only difference from the normal aprouch is that in SSR mode the react-p5 lib should not be loaded because p5 doesn't support SSR and there is no sense for it to be support. So, if you are using react-p5 plus next.js and you need p5.sound as well, then try to use dynamic imports as in the code below which definitely will help you.
 
 ```javascript
 import dynamic from 'next/dynamic'
