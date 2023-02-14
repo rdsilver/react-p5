@@ -141,7 +141,7 @@ const Sketch = Loadable(
   () => import("react-p5")
 );
 
-export default LoadablePage;
+export default Sketch;
 ```
 
 #### With p5.sound
