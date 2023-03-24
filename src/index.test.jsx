@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import Sketch from './index';
 
 const reactP5TestId = 'react-p5';
@@ -59,5 +59,16 @@ describe('react-p5', () => {
 
     expect(getByTestId(reactP5TestId)).toBeDefined();
     expect(canvas).not.toBeNull();
+  });
+  
+  it('Should pass event object properly', () => {
+    const mouseClicked = jest.fn();
+    render(<MockComponent mouseClicked={mouseClicked} />);
+
+    fireEvent(window, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }));
+    expect(mouseClicked).toBeCalledWith(expect.any(Object), expect.any(UIEvent));
   });
 });
